@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p></p>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        axios({
+            url: 'http://hmajax.itheima.net/api/city',
+            // 参数查询
+            params: {
+                pname: '江西省'
+            }
+        }).then(result => {
+            console.log(result);
+            console.log(result.data.list);
+            //将数据以换行符为分隔符连接
+            document.querySelector('p').innerHTML = result.data.list.join('<br>')
+        })
+    </script>
+</body>
+
+</html>

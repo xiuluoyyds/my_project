@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+
+        span {
+            position: absolute;
+            top: 350px;
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn500">点击</button>
+    <button class="btn800">点击</button>
+    <div></div>
+    <span></span>
+
+    <script>
+        // 动画原理实际上就是利用定时器实现元素的移动
+        var div = document.querySelector('div');
+        var btn500 = document.querySelector('.btn500');
+        var btn800 = document.querySelector('.btn800');
+        var span = document.querySelector('span');
+        // var timer = setInterval(function () {
+        //     if (div.offsetLeft >= 500)
+        //         clearInterval(timer);
+        //     div.style.left = div.offsetLeft + 1 + 'px';
+        // }, 100)
+        // 函数封装,避免多个元素出现调用相同函数
+        function count(obj, target, callback) {
+            //防止多次点击使动画加速
+            clearInterval(obj.timer);
+            obj.timer = setInterval(function () {
+                if (obj.offsetLeft >= target) {
+                    clearInterval(obj.timer);
+                    // 回调函数
+                    if (callback)
+                        callback();
+                }
+                // 动画缓动效果
+                // 因为除法可能会出现小数以至于元素到达不了指定地点，所以需要对他取整数
+                var bu = (target - obj.offsetLeft) / 10;
+                // 应为往左和往右是不一样的
+                bu = bu > 0 ? Math.ceil(bu) : Math.floor(bu);
+                obj.style.left = obj.offsetLeft + bu + 'px';
+
+            }, 10)
+        }
+        btn500.addEventListener('click', function () {
+            count(div, 500);
+        })
+        btn800.addEventListener('click', function () {
+            count(div, 800, function () {
+                div.style.backgroundColor = 'red';
+            });
+            // count(div, 800);
+        })
+        count(span, 700);
+    </script>
+</body>
+
+</html>

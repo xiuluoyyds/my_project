@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // window.onload = function () {
+        //     window.addEventListener("resize", function () {
+        //         console.log(window.innerWidth);
+        //         console.log('变化了');
+        //         if (window.innerWidth < 1500)
+        //             div.style.backgroundColor = 'none';
+        //     })
+        // }
+
+        window.addEventListener('load', function () {
+            var divs = document.querySelector('div');
+            window.addEventListener('resize', function () {
+                console.log(window.innerWidth);
+                console.log('变化了');
+                if (window.innerWidth < 700)
+                    // div.style.backgroundColor = 'none';
+                    divs.style.display = 'none';
+            })
+        })
+    </script>
+    <div></div>
+</body>
+
+</html>

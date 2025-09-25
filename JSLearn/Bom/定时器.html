@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>关闭定时器</button>
+    <script>
+        // 这个延时时间单位是毫秒，省略时默认为零
+        // 一般都会给定时器取名字
+        var times1 = setTimeout(function () {
+            console.log('你好');
+        }, 3000);
+        var btn = document.querySelector('button');
+        // 关闭定时器
+        btn.addEventListener("click", function () {
+            clearTimeout(times1);
+        })
+
+    </script>stu.nchu.edu.cn
+</body>
+
+</html>

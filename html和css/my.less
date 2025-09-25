@@ -1,0 +1,23 @@
+@color: pink;
+
+body {
+    background-color: @color;
+}
+
+div {
+    span {
+        // less的嵌套使用
+        color: #ffffff;
+        width: 25px*5;
+
+        // 伪类或交集选择器在less里的使用
+        &:hover {
+            color: aqua;
+        }
+    }
+}
+
+// less运算
+// 运算符的两边必须敲一个空格
+// 两个数参与运算如果只有一个有单位，则结果以有单位的单位为准
+// 两个数如果都有单位则以第一个单位为准

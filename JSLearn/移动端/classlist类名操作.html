@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        .btg {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <button>开关灯</button>
+    <script>
+        var div = document.querySelector('div');
+        // 添加类名
+        div.classList.add('two');
+        // 删除类名
+        div.classList.remove('one');
+        // 切换类名
+        var btn = document.querySelector('button');
+        btn.addEventListener('click', function () {
+            document.body.classList.toggle('btg');
+        })
+    </script>
+</body>
+
+</html>

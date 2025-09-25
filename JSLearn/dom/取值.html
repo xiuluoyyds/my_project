@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 往下取整
+        console.log(Math.floor(1.5));
+        // 往上取整
+        console.log(Math.ceil(1.5));
+        // 四舍五入
+        console.log(Math.round(1.5));
+        // 绝对值
+        console.log(Math.abs(-5));
+        // 该数字为0到1之间的小数
+        console.log(Math.random());
+        // 该数字为min到max之间的整数
+        function getrandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + 1;
+
+        }
+        var random = getrandom(1, 10);
+        while (true) {
+            var number = prompt('请输入1到10之间的数字');
+            if (number > random)
+                alert('你输入的数字大了，请重新输入');
+            else if (number < random)
+                alert('你输入的数字小了，请重新输入');
+            else {
+                alert('你输入的数字正确');
+                break;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

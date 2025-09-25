@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .city {
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+
+        .city .dot {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 10px;
+            height: 10px;
+            background-color: skyblue;
+            border-radius: 50%;
+
+        }
+
+        .city div[class^="purse"] {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 10px;
+            height: 10px;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 12px #009dfd;
+            border-radius: 50%;
+            animation-name: purse;
+            animation-duration: 1.2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            /* transform-origin: 0 0; */
+        }
+
+        @keyframes purse {
+            0% {}
+
+            50% {
+                /* width: 20px;
+                height: 20px; */
+                transform: scale(2, 2);
+                opacity: 1;
+            }
+
+            100% {
+                /* width: 50px;
+                height: 50px; */
+                transform: scale(5, 5);
+                opacity: 0;
+            }
+
+        }
+
+        .city .purse2 {
+            animation-delay: 0.4s;
+        }
+
+        .city .purse3 {
+            animation-delay: 0.6s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="city">
+        <div class="dot"></div>
+        <div class="purse1"></div>
+        <div class="purse2"></div>
+        <div class="purse3"></div>
+    </div>
+</body>
+
+</html>

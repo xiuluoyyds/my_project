@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=sve, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 主要作用 创建一个独立的作用域，避免了命名冲突,里面的变量都是局部变量
+        (function move(a, b) {
+            console.log(a + b);
+        }(1, 2));
+        (function btn(a, b) {
+            console.log(a + b);
+        })(3, 2)
+    </script>
+</body>
+
+</html>

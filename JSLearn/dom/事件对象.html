@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 0 auto;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        p {
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+        }
+
+        a {
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p><a
+                href="https://www.vip.com/?wq=1&app_no_failed=1&nchl_param=share&auto_wakeup=1&tra_from=tra%3AC01V4m83vf2uzug2%3A%40_%401710492220031%3Amig_code%3A%3Aac0122z0xad4m25zzt5e4mib6z26hao5"></a>
+        </p>
+    </div>
+    <div class="ps">
+        <p></p>
+    </div>
+    <script>
+        var divs = document.querySelector('div');
+        divs.onclick = function (event) {
+            // event 是一个事件对象 写在侦听函数小括号里 当形参来看
+            // 事件对象只有有事件才会存在，它是系统给我们自动创建的 不需要我们给他传递参数
+            // 事件对象是我们事件的一系列相关数据的集合 比如鼠标点击里就包含了鼠标的相关信息，鼠标坐标呀，如果是键盘事件就包含了键盘事件的信息，例如判断用户按下了哪个键
+            // 这个事件对象我们可以自己命名
+            console.log(event.target);
+            // event是返回触发事件的对象（元素）
+            console.log(this);
+            // this指的是绑定事件的对象
+            // 如果我们点击div里的p标签,event.target返回的是p标签,而this返回的是div标签
+        }
+        var p = document.querySelector('p');
+        p.addEventListener("mousedown", fn);
+        function fn(e) {
+            console.log(e.type);
+        }
+        var a = document.querySelector('a');
+        a.addEventListener("click", function (e) {
+            e.preventDefault();
+            // 阻止默认行为，例如点击链接跳转页面
+        })
+    </script>
+</body>
+
+</html>

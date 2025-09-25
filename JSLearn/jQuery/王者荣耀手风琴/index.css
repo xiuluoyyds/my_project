@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+}
+
+.box {
+    margin: 100px auto;
+    width: 900px;
+    background: url(images/bg.png) no-repeat;
+    overflow: hidden;
+    padding: 10px;
+}
+
+ul {
+    overflow: hidden;
+}
+
+li {
+    position: relative;
+    margin-right: 10px;
+    float: left;
+    width: 80px;
+    height: 69px;
+
+}
+
+.current {
+    width: 224px;
+
+}
+
+.small {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 69px;
+    border-radius: 5px;
+}
+
+.big {
+    display: none;
+    width: 224px;
+    height: 69px;
+}
+
+.current .small {
+    display: none;
+}
+
+.current .big {
+    display: block;
+}

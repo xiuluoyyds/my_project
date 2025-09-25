@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .toduo {
+            position: relative;
+            width: 400px;
+            height: 300px;
+            margin: 30px auto;
+        }
+
+        .toduo img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* .toduo .mask {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .7) url(images/1700630257333.jpg) no-repeat center;
+        }
+
+        .toduo:hover .mask {
+            display: block;
+        } */
+        .toduo::after {
+            content: '';
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .7) url(images/1700630257333.jpg) no-repeat center;
+        }
+
+        .toduo:hover::after {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="toduo">
+        <img src="images/1.jpg" alt="">
+        <!-- <div class="mask"></div> -->
+    </div>
+</body>
+
+</html>

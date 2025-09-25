@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        window.onload = function () {
+            var btn = document.querySelector('button');
+            btn.addEventListener("click", function () {
+                alert('好的');
+            })
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            alert('123');
+        })
+        // load是等页面内容全部加载完毕，包括页面dom元素，图片 css  flash
+        // DOMContentLoaded时dom加载完毕 不包含图片 css  flash 加载速度比load更快点
+    </script>
+    <button>惦记我</button>
+</body>
+
+</html>

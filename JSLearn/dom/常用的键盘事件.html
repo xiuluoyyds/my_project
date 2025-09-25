@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 按键弹起时触发
+        document.addEventListener("keyup", function (e) {
+            console.log('弹起来');
+            console.log(e.keyCode);
+        })
+        // 按键按下时触发 可以识别功能键 如ctrl shift 左右箭头等
+        document.addEventListener("keydown", function (e) {
+            console.log('按下了');
+            console.log(e.keyCode);
+
+        })
+        // 按键按下时触发 不可以识别功能键
+        document.addEventListener("keypress", function (e) {
+            console.log('按下了');
+            console.log(e.keyCode);
+
+        })
+        // 三个事件的执行顺序 keydown--keypress--keyup 与代码顺序无关
+        //keycode可以返回该键的ASCII值 
+        // keypress使用keycode可以区分字母的大小写，而keyup,keydown不可以
+
+    </script>
+</body>
+
+</html>

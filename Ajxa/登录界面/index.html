@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="box">
+        <div class="header">
+            <h2>欢迎登陆</h2>
+        </div>
+        <!-- 提示部分 -->
+
+        <div class="form-wrap">
+            <div class="prompt"></div>
+            <!-- <form action="">
+                <div class="username">
+                    <label for="">用户名</label>
+                    <input type="text" id="one" placeholder="请输入用户名">
+                </div>
+                <div class="password">
+                    <label for="">密码</label>&nbsp&nbsp&nbsp
+                    <input type="password" id="two" placeholder="请输入密码">
+                </div>
+            </form> -->
+
+            <form action="">
+                <div class="username">
+                    <label for="one">用户名</label>
+                    <input type="text" id="one" placeholder="">
+                </div>
+                <div class="password">
+                    <label for="two">密码</label>
+                    <input type="password" id="two" placeholder="">
+                </div> <button>确认</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    </div>
+    <script>
+       var alert = document.querySelector('.header')
+        function inseert(mys, isture) {
+            // 使提示框显示
+            alert.classList.add('show')
+            if (isture == true) {
+                alert.style.blackground = 'green'
+            }
+            else
+                alert.style.blackground = 'red'
+            setTimeout(() => {
+                alert.classList.remove('show')
+                
+            }, 2000);
+        }
+
+        document.querySelector('button').addEventListener('click', () => {
+            var input = document.querySelectorAll('input')
+            var username = document.querySelector('#one').value
+            var password = document.querySelector('#two').value
+
+            
+            
+
+            if (username.length < 8) {
+console.log('用户名输入错误')
+return
+            }
+            if (password.length < 8) {
+                console.log('密码输入错误')
+return 
+            }
+            axios({
+                url: 'http://hmajax.iteima.net/api/login',
+                method:'POST',
+                data: {
+                    password,
+                    username
+                }
+            }).then(result =>{
+                console.log(result)
+                console.log(result.data.message);
+                
+            }).catch(error  =>{
+                console.log(error)
+                console.log(error.response.data.message);
+                            });
+            
+        })
+    </script>
+</body>
+
+</html>

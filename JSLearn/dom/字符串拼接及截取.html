@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str = 'andy';
+        console.log(str.concat('abc'));//拼接字符串
+        console.log(str.substr(2, 2));//第一个二是从什么位置开始，第二个是截取几个字符
+        var str1 = 'sjeiojdfjehlskj';
+        while (str1.indexOf('j') != -1) {
+            str1 = str1.replace('j', '*');//替换字符
+        }
+        console.log(str1);
+        var str2 = 'red,pink,blue';
+        console.log(str2.split(','));//删除分隔符，将字符串转换成数组
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        div {
+            margin: 100px auto;
+            width: 400px;
+            height: 400px;
+            background-image: url("1/260dab66a795c4a7f55fdec247d7c3681712228016959.jpeg");
+            background-size: 100% 100%;
+        }
+
+        .current {
+            background-image: url("1/8cc008b9a04143a92763ab3f548cb7df1712228020803.jpeg");
+        }
+    </style>
+</head>
+
+<body>
+    <div class="current">
+        <script>
+            $("div").click(function () {
+                // <!-- 添加类 -->
+                // $("div").addClass("current");
+                // // < !--删除类 -->
+                // $("div").removeClass("current");
+                // < !--切换类 -->
+                $("div").toggleClass("current");
+            })
+        </script>
+    </div>
+</body>
+
+</html>

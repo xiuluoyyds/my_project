@@ -1,0 +1,21 @@
+.main {
+    width: 1000px;
+    height: 465px;
+    margin-left: 220px;
+    background-color: pink;
+
+}
+
+.focus {
+    float: left;
+    width: 720px;
+    height: 465px;
+    background-color: purple;
+}
+
+.newflash {
+    float: right;
+    width: 270px;
+    height: 465px;
+    background-color: orange;
+}

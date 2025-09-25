@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="box" id="time"></div>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <ol>
+        <li>你好吗</li>
+        <li>你好吗</li>
+        <li>你好吗</li>
+    </ol>
+    <script>
+        // 因为文档是从上往下加载的，所以先得有标签，再有script
+        // 这是依照id来查询
+        var timer = document.getElementById('time');
+        // 这是依照标签名来查询
+        var lis = document.getElementsByName('li');
+        // 得到父元素下面指定类型的所有元素,注意必须指定父元素具体是哪个
+        var ollis = ol[0].getElementsByName('li');
+        console.log(lis[1]);
+        console.log(timer);
+        console.log(typeof timer);
+        // 得到该元素的所有属性
+        console.dir()
+        // html新增方法，只能返回第一个是该类名的标签元素，.box，#box,
+        var box = document.querySelector('.box');
+        var li = document.querySelector('li');
+        // html新增方法，可以返回所有是该类名的标签元素
+        var allbox = document.querySelectorAll('.box');
+        // 获取Body元素
+        var eilebody = document.body;
+        // 获取html元素
+        var eilehtml = document.documentElement;
+    </script>
+</body>
+
+</html>

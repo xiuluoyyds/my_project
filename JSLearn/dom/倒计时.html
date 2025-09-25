@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function counttime(time) {
+            // 返回的是当前时间的豪秒数
+            var nowtime = +new Date();
+            // 返回的是用户输入时间总的豪秒数
+            var inputtime = +new Date(time);
+            var time = (inputtime - nowtime) / 1000;
+            var day = parseInt(time / 24 / 60 / 60);
+            var hours = parseInt(time / 60 / 60 % 24);
+            var minutes = parseInt(time / 60 % 60);
+            var miao = parseInt(time % 60);
+            return day + '天' + hours + '时' + minutes + '分' + miao + '秒';
+        }
+        console.log(counttime('2023,11,5'));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

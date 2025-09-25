@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.contain {
+    margin: 0 auto;
+    width: 600px;
+    text-align: center;
+}
+ .contain .table {
+    /* 边框合并 */
+    width: 80%;
+    border-collapse: collapse;
+margin: 0 auto;
+    text-align: center;
+ }
+
+ tr {
+    width: 20%;
+    height: 60px;
+    background-color: darkgray;
+    border: 1px solid #fff;
+ }
+ .modal{
+    width: 100px;
+ }
+.modal-body{
+    text-align: center;
+}

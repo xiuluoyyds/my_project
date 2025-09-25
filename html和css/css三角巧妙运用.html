@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 0;
+            height: 0;
+            border-color: transparent red transparent transparent;
+            border-width: 100px 20px 0 0;
+            border-style: solid;
+        }
+
+        .price {
+            width: 360px;
+            height: 24px;
+            line-height: 24px;
+            border: 1px solid red;
+            margin: 0 auto;
+            /* background-color: pink; */
+        }
+
+        .price .miaosha {
+            position: relative;
+            float: left;
+            width: 160px;
+            height: 100%;
+            text-align: center;
+            background-color: red;
+            margin-right: 15px;
+        }
+
+        .miaosha li {
+            list-style: none;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 0;
+            height: 0;
+            border-color: transparent white transparent transparent;
+            border-style: solid;
+            border-width: 24px 10px 0 0;
+        }
+
+        .yuanjia {
+            font-size: 12px;
+            color: gray;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+    </div>
+    <div class="price">
+        <span class="miaosha">￥1990
+            <li>
+
+            </li>
+        </span>
+        <span class="yuanjia">￥580</span>
+    </div>
+</body>
+
+</html>

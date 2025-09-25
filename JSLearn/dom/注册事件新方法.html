@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    button {
+      width: 50px;
+      height: 50px;
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <button>1</button>
+  <button>2</button>
+  <script>
+    var btns = document.querySelectorAll('buttons');
+    // 同一个元素，同一个事件可以添加多个事件
+    // 里面的事件类型是字符串 必须加引号 而且不带On
+    btns[0].addEventListener('click', function () {
+      alert(22);
+    })
+  </script>
+</body>
+
+</html>

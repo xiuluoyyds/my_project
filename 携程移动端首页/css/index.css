@@ -1,0 +1,199 @@
+.search {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.search .search-main {
+    display: flex;
+    height: 32px;
+    margin: 5px 20px;
+    border-radius: 15px;
+    background-color: #f4f4f4;
+    border: #0086F6 1.8px solid;
+    line-height: 32px;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.search .search-main span {
+    margin-left: 6px;
+    font-size: 16px;
+
+    color: #999999
+}
+
+.search .search-main::before {
+    content: '\e986';
+    margin-left: 9px;
+    font-family: 'icomoon';
+}
+
+.nav {
+    display: flex;
+    height: 184px;
+    margin: 55px 5px;
+    border-radius: 16px;
+    flex-direction: row;
+    overflow: hidden;
+    /* border-top-right-radius: 15px;
+    border-top-left-radius: 15px; */
+}
+
+.nav ul {
+    display: flex;
+    flex: 1;
+    background-color: pink;
+    height: 100%;
+    margin-left: 1px;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.nav ul li {
+    position: relative;
+    flex: 1;
+    width: 100%;
+    text-align: center;
+    /* margin-top: 5px; */
+    font-size: 12px;
+    border: #fff 1px solid;
+}
+
+.nav ul li span {
+    display: flex;
+    position: absolute;
+    bottom: 5px;
+    left: 25px;
+    min-width: 24px;
+    /* width: auto; */
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+}
+
+.nav .ul-first li:nth-child(1) {
+    background: url(../images/酒店.png) no-repeat 25px 5px;
+    background-color: #fa6554;
+    background-size: 28px 28px;
+    margin: 0 auto;
+    text-align: center;
+    border-top-left-radius: 15px;
+}
+
+.nav .ul-first li:nth-child(2) {
+    background: url(../images/民宿.png) no-repeat 25px 5px;
+    background-color: #fff5f1;
+    background-size: 28px 28px;
+    margin: 0 auto;
+    text-align: center;
+    /* border-top-left-radius: 15px; */
+}
+
+.nav .ul-first li:nth-child(3) {
+    background: url(../images/美食.png) no-repeat 25px 5px;
+    background-color: #fff5f1;
+    background-size: 28px 28px;
+    margin: 0 auto;
+    text-align: center;
+    /* border-top-left-radius: 15px; */
+}
+
+
+.nav .ul-second li:nth-child(1) {
+    background: url(../images/飞机.png) no-repeat 25px 5px;
+    background-color: #49a1fa;
+    background-size: 28px 28px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.nav .ul-second li:nth-child(2) {
+    background: url(../images/机+酒.png) no-repeat 25px 5px;
+    background-color: #eff9ff;
+    background-size: 28px 28px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.nav .ul-second li:nth-child(3) {
+    background: url(../images/接送机.png) no-repeat 25px 5px;
+    background-color: #eff9ff;
+    background-size: 28px 28px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.nav .ul-third li:nth-child(1) {
+    background: url(../images/火车票.png) no-repeat 25px 5px;
+    background-color: #6394ff;
+    background-size: 28px 28px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.nav .ul-third li:nth-child(2) {
+    background: url(../images/汽车船票.png) no-repeat 25px 5px;
+    background-color: #f2f5ff;
+    background-size: 28px 28px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.nav .ul-third li:nth-child(3) {
+    background: url(../images/租车.png) no-repeat 25px 5px;
+    background-color: #f2f5ff;
+    background-size: 28px 28px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.nav .ul-fourth li:nth-child(1) {
+    background: url(../images/旅游.png) no-repeat 25px 5px;
+    background-color: #47d2b4;
+    background-size: 28px 28px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.nav .ul-fourth li:nth-child(2) {
+    background: url(../images/门票.png) no-repeat 25px 5px;
+    ;
+    background-color: #ecfcf8;
+    background-size: 28px 28px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.nav .ul-fourth li:nth-child(3) {
+    background: url(../images/周边游.png) no-repeat 25px 5px;
+    background-color: #ecfcf8;
+    background-size: 28px 28px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.nav .ul-fifth li:nth-child(1) {
+    background: url(../images/攻略.png) no-repeat 25px 5px;
+    background-color: #ff973f;
+    background-size: 28px 28px;
+    margin: 0 auto;
+    text-align: center;
+    border-top-right-radius: 15px;
+}
+
+.nav .ul-fifth li:nth-child(2) {
+    background: url(../images/购物.png) no-repeat 25px 5px;
+    background-color: #fff9f2;
+    background-size: 28px 28px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.nav .ul-fifth li:nth-child(3) {
+    background: url(../images/借钱.png) no-repeat 25px 5px;
+    background-color: #fff9f2;
+    background-size: 28px 28px;
+    margin: 0 auto;
+    text-align: center;
+}

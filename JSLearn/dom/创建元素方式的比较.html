@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>确定</button>
+    <div>123</div>
+    <script>
+        // 该方法是将内容直接写入页面的内容流 但是文档流执行完毕，它会导致页面全部重绘
+        document.write('<div>456</div>');
+        // 该方式创建多个元素效率更高（不要拼接字符串，采取数组方式拼接），结构稍微复杂
+        var arr = [];
+        for (var i = 0; i < 1000; i++) {
+            arr.push('<a href="javascript:;></a>');
+        }
+        // join是将数组里的元素转换成字符串
+        inner.innerHTML = arr.join('');
+        // createElement创建多个元素稍微慢一点，但是结构更清晰
+    </script>
+</body>
+
+</html>

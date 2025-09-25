@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .class {
+            display: flex;
+            width: 200px;
+            height: 200px;
+        }
+
+        .class div {
+            /* 分配剩余的空间，flex代表份数 */
+            flex: 1;
+        }
+
+        .class div:nth-child(1) {
+            /* 控制子元素自己在侧轴上的排列方式 */
+            align-self: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="class">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+
+</html>

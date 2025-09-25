@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>确定</button>
+    <script>
+        var btn = document.querySelector('button');
+        btn.addEventListener('click', function () {
+            // 跟href一样 可以跳转页面 可以记录历史 也可以后退
+            location.assign('http://huitongpm.cn/pm/947-0-99.html');
+            // 替换当前页面 可以跳转页面 不可以记录历史 也不可以后退
+            location.replace('http://huitongpm.cn/pm/947-0-99.html');
+            // 重新加载页面 相当于f5
+            location.reload('http://huitongpm.cn/pm/947-0-99.html');
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstraps/css/bootstrap.min.css">
+    <style>
+        .row div {
+            /* float: left; */
+            height: 50px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- 栅格系统把container分为12列，col-lg是不同大小屏幕的类前辍，后面的数字代表占的份数 -->
+            <!-- 如果孩子的份数小于12，则会有空白，大于则多余的会到下一列 -->
+            <!-- 如果想要在不同的屏幕大小下，显示不同的样式，则可以加多个类前辍 -->
+            <!-- <div class="col-lg-3 col-md-4">1</div>
+            <div class="col-lg-3 col-md-4">2</div>
+            <div class="col-lg-3 col-md-4">3</div>
+            <div class="col-lg-3 col-md-4">4</div> -->
+            <div class="col-lg-3">左侧</div>
+            <!-- offset-lg-n是控制盒子右偏移的，偏移的距离就是12-所有盒子的份数 -->
+            <div class="col-lg-3 offset-lg-6">右侧</div>
+            <!-- pull和push可以改变列盒子的排列顺序 -->
+            <!-- hidden和visible可以使盒子在不同屏幕大小下显示和隐藏 -->
+        </div>
+
+    </div>
+</body>
+
+</html>

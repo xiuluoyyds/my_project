@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            display: block;
+            float: left;
+            margin-left: 15px;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            color: #fff;
+            background-color: #333;
+
+        }
+    </style>
+</head>
+
+<body>
+    <span class="hours">1</span>
+    <span class="minutes">2</span>
+    <span class="second">3</span>
+    <button> 停止</button>
+    <script>
+        var hours = document.querySelector('.hours');
+        var minutes = document.querySelector('.minutes');
+        var second = document.querySelector('.second');
+        var btn = document.querySelector('button');
+        var inputtime = +new Date('2024-3-21 18:53:00');
+        // 防止刷新出现空白
+        CountDown();
+        var times = setInterval(CountDown, 1000);
+        // 停止计时
+        btn.addEventListener('click', function () {
+            clearInterval(times);
+        })
+        
+        function CountDown() {
+            // 返回的是当前时间的豪秒数
+            var nowtime = +new Date();
+            // 返回的是用户输入时间总的豪秒数
+            // var inputtime = +new Date(time);
+            var time = (inputtime - nowtime) / 1000;
+            var day = parseInt(time / 24 / 60 / 60);
+            var hour = parseInt(time / 60 / 60 % 24);
+            hours.innerHTML = hour;
+            var minute = parseInt(time / 60 % 60);
+            minutes.innerHTML = minute;
+            var miao = parseInt(time % 60);
+            miao = miao < 10 ? '0' + miao : miao;
+            second.innerHTML = miao;
+            // return day + '天' + hours + '时' + minutes + '分' + miao + '秒';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 清除浮动伪元素 */
+        .clearfix::after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+
+
+        .div {
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            margin: 0 auto;
+        }
+
+        .left {
+            float: left;
+            background-color: pink;
+            width: 100px;
+            height: 200px;
+        }
+
+        .right {
+            float: left;
+            width: 100px;
+            height: 200px;
+            background-color: red;
+        }
+
+        .right>div {
+            background-color: green;
+            float: left;
+            height: 80px;
+            width: 20px;
+            margin-left: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div clearfix">
+        <div class="left">
+        </div>
+        <div class="right">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+        </div>
+    </div>
+</body>
+
+</html>

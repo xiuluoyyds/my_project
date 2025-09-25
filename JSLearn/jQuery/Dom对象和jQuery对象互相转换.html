@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        video {
+            position: absolute;
+            right: 100px;
+            margin-top: -200px;
+
+            width: 800px;
+            height: 800px;
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+
+</head>
+
+<body>
+    <video src="视频/10-56-50.mp4" muted></video>
+    <!-- <video src="视频/10-56-50.mp4"></video> -->
+    <script>
+
+        // var video = document.querySelector('video');
+        // 直接获取视频，得到的就是jQuery对象
+        // $('video');
+        var myvideo = document.querySelector('video');
+        // video.play();
+        // jQuery对象转换成dom对象
+        $('video')[0].play();
+        var count = 0;
+        document.addEventListener('click', function () {
+            myvideo.muted = false;
+            if (count % 2 == 0) {
+                myvideo.play();
+
+            }
+            else
+                myvideo.pause();
+            count++;
+        })
+    </script>
+</body>
+
+</html>

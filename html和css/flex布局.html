@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            /* 给父元素设置弹型布局 */
+            display: flex;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            /* 给子元素设置主轴，子元素依据主轴排列 */
+            flex-direction: column;
+            /* 子元素换行 */
+            flex-wrap: wrap;
+            /* 设置子元素的排列方式 */
+            /* 上面两个的结合 */
+            flex-flow: column wrap;
+            /* 从头开始排列 */
+            justify-content: flex-start;
+            /* 居中对齐 */
+            justify-content: center;
+            /* 先两边贴边，在平分剩余空间 */
+            justify-content: space-between;
+
+            /* 设置侧轴子元素的排列,只能单行 */
+            align-items: center;
+            /* 设置侧轴子元素的排列,只能多行 */
+            align-content: center;
+        }
+
+        .box div {
+            width: 30px;
+            height: 30px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+
+</html>

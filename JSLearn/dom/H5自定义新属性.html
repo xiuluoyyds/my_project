@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div data-name="2" data-gender="男" data-list-index="1"></div>
+    <script>
+        var div = document.querySelector('div');
+        // H5新增的获取自定义属性的方法 他只能以data-开头
+        // dataset是一个集合，里面包含了所有以data-开头的自定义的属性
+        console.log(div.dataset);
+        console.log(div.dataset.name);
+        console.log(div.dataset['name']);
+        // 如果属性内有多个以-链接的单词，我们获取的时候就以驼峰命名法
+        console.log(div.dataset.listIndex);
+    </script>
+</body>
+
+</html>

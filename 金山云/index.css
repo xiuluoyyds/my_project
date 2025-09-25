@@ -1,0 +1,502 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 1500px;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+
+/* 顶部 */
+.top {
+    height: 30px;
+    background-color: #dc353c;
+    font-size: 12px;
+}
+
+
+.login {
+    /* width: 300px; */
+    height: 28px;
+    margin-left: 70%;
+}
+
+.login li {
+    float: left;
+    margin-left: 10px;
+    width: 50px;
+    height: 28px;
+    text-align: center;
+    line-height: 28px;
+    color: #fff;
+}
+
+.login li:nth-child(2) {
+    /* border-left: 1px solid #fff;
+    border-right: 1px solid #fff; */
+}
+
+.login li:last-child {
+    margin-left: 20px;
+    height: 24px;
+    border: 1px solid #fff;
+}
+
+/* 导航栏 */
+.nav {
+    height: 80px;
+    background-color: #d8ddf1;
+}
+
+/* 左侧 */
+.nav-left {
+    float: left;
+    margin-left: 10%;
+    margin-top: 23px;
+    width: 120px;
+    height: 34px;
+    text-align: center;
+    line-height: 45px;
+}
+
+.nav-left img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 右侧 */
+.nav-right {
+    float: right;
+    margin-right: 10%;
+
+}
+
+.nav-right ul li {
+    float: left;
+
+    /* margin: 0 auto; */
+    margin-left: 35px;
+    padding: 20px 0;
+    height: 36px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    /* background-color: skyblue; */
+}
+
+.nav-right ul li a {
+    color: #000;
+}
+
+.nav-right ul li:hover {
+    border-bottom: 4px solid #d62728;
+}
+
+/* 背景· */
+.background {
+    height: 400px;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+}
+
+/* 功能 */
+.one {
+    margin-top: 25px;
+    width: 100%;
+}
+
+.one h2 {
+    color: #495668;
+}
+
+.one span {
+    color: #94a3ac;
+}
+
+.one h2,
+span {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.two {
+    margin-top: 25px;
+    margin: 10px auto;
+    width: 1200px;
+    /* background-color: palegoldenrod; */
+    text-align: center;
+}
+
+.two ul li {
+    position: relative;
+    float: left;
+    width: 195px;
+    height: 180px;
+    /* margin: 10px auto;
+    text-align: center; */
+    border: 1px solid #fff;
+    background-color: #7b797a;
+}
+
+.two ul li div {
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    background-color: #fff;
+    margin: 50px auto;
+    border-radius: 50%;
+}
+
+.two ul li div img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -22px;
+    margin-top: -22px;
+    /* padding: 10px; */
+}
+
+.three {
+    display: block;
+    margin-top: 250px;
+    width: 100%;
+    text-align: center;
+}
+
+.three h1 {
+    margin: 10px auto;
+    text-align: center;
+    color: #1d1e1f;
+}
+
+.three div {
+    margin-top: 25px;
+    color: #8b7c67;
+}
+
+.four {
+    /* margin-top: 30px; */
+    margin: 30px auto;
+    width: 100%;
+    text-align: center;
+}
+
+.four div {
+    width: 30%;
+    height: 400px;
+}
+
+.four .tu {
+    float: left;
+}
+
+.four div img {
+    display: inline;
+    float: left;
+    height: 400px;
+    margin-left: 150px;
+    /* width: ; */
+}
+
+.four .introduce {
+    display: block;
+    float: right;
+    margin-right: 180px;
+    height: 250px;
+    margin-top: 50px;
+}
+
+.four .introduce h1 {
+    float: left;
+    width: 250px;
+    /* left: ; */
+    margin-left: 25px;
+    padding: 10px;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+.four .introduce span {
+    display: block;
+    /* float: left; */
+    margin-top: 75px;
+    width: 600px;
+    height: 100px;
+    text-align: left;
+    line-height: 35px;
+}
+
+.four .introduce .more {
+    margin-top: 60px;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    /* padding: 10px; */
+    line-height: 40px;
+    border: 1px solid #dc353c;
+    /* background-color: pink; */
+}
+
+.four .introduce .more a {
+    display: block;
+    color: #bdbdbd;
+}
+
+.five {
+    /* display: block; */
+    margin: 500px auto;
+    width: 80%;
+    height: 400px;
+    /* background-color: pink; */
+}
+
+.five div[class^="index"] {
+    float: left;
+    margin-left: 20px;
+    width: 30%;
+    text-align: center;
+    text-overflow: ellipsis;
+}
+
+.five div[class^="index"] ul li {
+    width: 290px;
+    /* width: 33%; */
+    height: 20px;
+    margin-top: 15px;
+    /* overflow: hidden; */
+
+
+}
+
+.five div[class^="index"] ul li a {
+    display: block;
+    width: 190px;
+    height: 15px;
+    color: #bdbdbd;
+    text-align: left;
+    font-size: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    /* 强制不换行 */
+    text-overflow: ellipsis;
+}
+
+.five div[class^="index"] ul {
+    margin-top: 50px;
+}
+
+.five div[class^="index"] h2 {
+    margin: 30px auto;
+    width: 150px;
+    height: 55px;
+    margin-left: -15px;
+    text-align: center;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+.five .index-two h2 {
+    width: 220px !important;
+}
+
+.five .index-two {
+    /* margin-left: 150px; */
+}
+
+.five .index-three {
+    /* margin-right: 50px; */
+}
+
+.five .index-three div {
+    margin-left: 0;
+    margin-top: 55px;
+    width: 295px;
+    height: 90px;
+}
+
+.five .index-three ul {
+    /* display: block; */
+    margin-top: 15px !important;
+    width: 200px;
+    height: 20px;
+}
+
+.abottom {
+    width: 100%;
+    height: 350px;
+    margin-top: -550px !important;
+    background-color: #333132;
+}
+
+
+.abottom div[class^="bottom"] {
+    float: left;
+    margin-left: 120px;
+    margin-top: 30px;
+
+}
+
+.abottom .bottom-one {
+    margin-left: 200px !important;
+}
+
+.abottom div[class^="bottom"] h3 {
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.abottom div[class^="bottom"] ul li {
+    margin-top: 10px;
+    text-align: center;
+
+}
+
+.abottom div[class^="bottom"] ul li a {
+    font-size: 12px;
+    color: #9d9b9c;
+}
+
+/* .abottom .lastleft {
+    display: block;
+    float: left;
+    margin-left: 1050px;
+    margin-top: 15px;
+    width: 250px;
+    height: 450px;
+    background-color: pink;
+    /* width: 150px; */
+/* } */
+
+/* .abottom .lastleft div {
+    display: block;
+    float: left;
+}
+/*  */
+.abottom .bottom-five {
+    width: 320px;
+}
+
+.abottom .bottom-five ul {
+    display: block;
+    float: left;
+    margin-left: 115px;
+    text-align: left;
+    margin-top: -130px;
+}
+
+.abottom .bottom-five ul li {
+    position: relative;
+    display: block;
+    /* float: left; */
+    width: 280px;
+    height: 20px;
+    padding: 2px 0 10px;
+    text-align: left !important;
+    margin-top: 20px !important;
+    font-size: 14px;
+    color: #cfcfcf;
+    border-bottom: 1px solid #3d3d44;
+}
+
+.abottom .bottom-five ul li:nth-child(1)::before {
+    position: absolute;
+    content: '';
+    left: -14px;
+    top: 5px;
+    width: 11px;
+    height: 17px;
+    background: url(images/60.png) no-repeat 100% 100%;
+}
+
+.abottom .bottom-five ul li:nth-child(2)::before {
+    position: absolute;
+    content: '';
+    left: -15px;
+    top: 5px;
+    width: 15px;
+    height: 13px;
+    background: url(images/61.png) no-repeat 100% 100%;
+}
+
+.abottom .bottom-five ul li:nth-child(3)::before {
+    position: absolute;
+    content: '';
+    left: -15px;
+    top: 5px;
+    width: 17px;
+    height: 14px;
+    background: url(images/66.png) no-repeat 100% 100%;
+}
+
+.abottom .bottom-five ul li:last-child {
+    border-bottom: none;
+}
+
+.abottom .bottom-five {
+    width: 270px;
+}
+
+.abottom .bottom-five .index {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 14px;
+    color: #cfcfcf;
+}
+
+.abottom .bottom-five .number::before {
+    position: absolute;
+    content: '';
+    left: -15px;
+    top: 20px;
+    width: 13px;
+    height: 14px;
+    background: url(images/63.png) no-repeat 100% 100%;
+    /* background-color: pink; */
+}
+
+.abottom .bottom-five .question::before {
+    position: absolute;
+    content: '';
+    left: -16px;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    background: url(images/64.png) no-repeat 100% 100%;
+}
+
+.abottom .bottom-five .QR {
+    position: relative;
+}
+
+.abottom .bottom-five .QR::after {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 13px;
+    left: 84px;
+    width: 0;
+    height: 0;
+    background-color: #fff;
+    border-bottom: 15px solid #333132;
+    border-left: 15px solid #333132;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #333132;
+    transform-origin: 50% 50%;
+    transform: rotate(180deg);
+}

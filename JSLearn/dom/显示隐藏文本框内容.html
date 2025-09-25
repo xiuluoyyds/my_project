@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            width: 100px;
+            height: 20px;
+            color: #999;
+        }
+
+        div {
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+        }
+
+        .change {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" value="手机">
+    <div class="first"></div>
+    <script>
+        var input = document.querySelector('input');
+        input.onfocus = function () {
+            if (this.value === '手机')
+                this.value = '';
+            this.style.color = '#333';
+        }
+        input.onblur = function () {
+            if (this.value = '')
+                this.value = '手机';
+            this.style.color = '#999';
+        }
+        var div = document.querySelector('div');
+        div.onclick = function () {
+            // 如果要修改的样式比较多，可以直接修改他的类名
+            this.className = 'change';
+            // 如果想保留原先的类名
+            // this.className=' first change';
+        }
+    </script>
+</body>
+
+</html>

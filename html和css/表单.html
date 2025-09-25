@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:focus {
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        姓名 <input type="text" name="用户名" value="请输入用户名" maxlength="6"><br />
+        密码<input type="password" name="password"><br />
+        性别：<label for="男">男</label><input type="radio" name="sex" id="男">女<input type="radio" name="sex"><br />
+        爱好: 打篮球<input type="checkbox"> 打乒乓球<input type="checkbox"> <br />
+        籍贯<select>
+            <option>北京</option>
+            <option>上海</option>
+            <option>深圳</option>
+            <option>黑龙江</option>
+            <option selected="selected">江西</option>
+            <option>湖南</option>
+            <option>四川</option>
+        </select><br />
+        <textarea name="abc" id="" cols="10" rows="5">
+
+        </textarea>
+        <input type="radio" checked="checked">同意政策<br />
+        <input type="reset">
+        <input type="submit"><br />
+        <input type="button" value="获取短信验证码"><br />
+        <input type="checkbox"  checked>
+    </form>
+
+</body>
+
+</html>

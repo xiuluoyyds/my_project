@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .w {
+            width: 1200px;
+            /* height: 500px; */
+            margin: 10PX auto;
+        }
+
+        .header {
+            height: 150px;
+            background-color: pink;
+        }
+
+        .banner {
+            /* margin-top: 15px; */
+            height: 250px;
+            background-color: skyblue;
+
+        }
+
+        .main {
+            /* margin-top: 15px; */
+            height: 1000px;
+            background-color: #333;
+        }
+
+        .silder-bar {
+            position: absolute;
+            left: 50%;
+            top: 300px;
+            margin-left: 620px;
+            width: 50px;
+            height: 150px;
+            background-color: orange;
+        }
+
+        span {
+            display: none;
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="silder-bar">
+        <span class="Goback"> 返回顶部</span>
+    </div>
+    <div class="header w"></div>
+    <div class="banner w"></div>
+    <div class="main w"></div>
+    <script>
+        var silder = document.querySelector('.silder-bar');
+        var banner = document.querySelector('.banner');
+        var goback = document.querySelector('.Goback');
+        var main = document.querySelector('.main');
+        // banner.offestTop 就是被卷去头部的大小 一定要写到滚动的外面
+        var bannerTop = banner.offsetTop;
+        var silderbar = silder.offsetTop;
+        var maintop = main.offsetTop;
+        // 当我们侧边栏固定定位之后应该变化的数值
+        var silderbartop = silderbar - bannerTop;
+        document.addEventListener('scroll', function () {
+            if (window.pageYOffset > bannerTop) {
+                silder.style.position = 'fixed';
+                silder.style.top = silderbartop + 'px';
+            }
+            else {
+                silder.style.position = 'absolute';
+                silder.style.top = '300px';
+            }
+            if (window.pageYOffset > maintop) {
+                goback.style.display = 'block';
+            }
+            else {
+                goback.style.display = 'none';
+            }
+        })
+    </script>
+</body>
+
+</html>

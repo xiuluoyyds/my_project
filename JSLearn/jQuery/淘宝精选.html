@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .box {
+            display: block;
+            margin: 100px auto;
+            width: 350px;
+            height: 248px;
+            border: 1px solid pink;
+            overflow: hidden;
+        }
+
+        ul,
+        .content {
+            float: left;
+        }
+
+        ul li {
+            background-color: fff;
+        }
+
+        ul li a {
+            display: block;
+            width: 48px;
+            height: 27px;
+            border-bottom: 1px solid red;
+            text-align: center;
+            line-height: 27px;
+            color: black;
+        }
+
+        ul li a:hover {
+            background-color: red;
+        }
+
+        .content div {
+            /* widows: 200px;
+            height: 250px; */
+            border-left: 1px solid pink;
+            border-right: 1px solid pink;
+        }
+
+        .content img {
+            width: 300px;
+            height: 255px;
+        }
+    </style>
+    <script src="jquery.min.js">
+
+    </script>
+</head>
+
+<body>
+    <li><a href="#"></a></li>
+    <div class="box">
+        <ul>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">9</a></li>
+        </ul>
+        <div class="content">
+            <div>
+                <a href="#"><img src="1/1.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="#"><img src="1/1700630257333.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="#"> <img src="1/1700630257338.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="#"><img src="1/17122284097763.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="#"><img src="1/17122284932115.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="#"><img src="1/17122285959047.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="#"><img src="1/260dab66a795c4a7f55fdec247d7c3681712228016959.jpeg" alt=""></a>
+            </div>
+            <div>
+                <a href="#"> <img src="1/8cc008b9a04143a92763ab3f548cb7df1712228020803.jpeg" alt=""></a>
+            </div>
+            <div>
+                <a href="#"><img src="1/91c66a035758ca8725afaf1039b918b51712228011220.jpg" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            $("ul li").mouseover(function () {
+                // 得到当前li的索引号
+                var index = $(this).index();
+                // 将所对应的图片显示出来
+                $(".content div").eq(index).show();
+                // 将其余图片隐藏
+                $(".content div").eq(index).siblings().hide();
+                // 链式编程
+                // $(".content div").eq(index).show().siblings().hide();
+            })
+        })
+    </script>
+</body>
+
+</html>

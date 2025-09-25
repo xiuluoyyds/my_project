@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* nth-child(number)里面的number既可以是数字也可以是关键字，如even（偶数），odd(奇数) ,如果是5number,就是5的倍数，
+        number+5就是从第五个开始到最后一个，包括第五个，-number+就是前五个*/
+        ul li:nth-child(1) {
+            background-color: pink;
+        }
+
+        /* :nth-of-type()也可以做到上述效果，且当第一个与指定类型的盒子不同时，nth-child()不会修改，而该方法可以，这是他们之间的区别 */
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+
+</html>

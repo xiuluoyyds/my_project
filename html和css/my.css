@@ -1,0 +1,10 @@
+body {
+  background-color: pink;
+}
+div span {
+  color: #ffffff;
+  width: 125px;
+}
+div span:hover {
+  color: aqua;
+}

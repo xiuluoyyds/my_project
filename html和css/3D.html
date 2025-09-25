@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /* 透视写到被观察元素的父盒子上面,数值越小，盒子越大 */
+            perspective: 500px;
+        }
+
+        .perspective {
+            width: 200px;
+            height: 200px;
+            /* background-color: pink; */
+            transform: translate3d(100px, 100px, 100px);
+        }
+
+        .box {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 50px auto;
+            transition: all 2s;
+            transform-style: preserve-3d;
+        }
+
+        .box .box1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: pink;
+        }
+
+        .box .box2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: skyblue;
+            transform: rotateX(60deg);
+        }
+
+        .box:hover {
+            transform: rotateY(30deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="perspective"></div>
+    <div class="box">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+
+</html>

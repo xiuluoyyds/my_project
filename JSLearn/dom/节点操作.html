@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="index">
+        <span class="number"></span>
+    </div>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+    <script>
+        // 父节点parentNode
+        var index = document.querySelector('.number');
+        console.log(index.parentNode);
+        var ul = document.querySelector('ul');
+        // 子节点 childNodes 所有的子节点 包括元素节点（nodetype：1），属性节点（nodetype：2），文本节点（nodetype：3）等等(文本节点包括文字，空格，换行等，)
+        console.log(ul.childNodes);
+        // children 获取所有的子元素节点
+        console.log(ul.children);
+        // 获取某一个特定的子元素
+        console.log(ul.children[0]);
+        var div = document.querySelector('div');
+        // 得到该节点的兄弟节点，也就是下一个节点
+        div.nextSibling
+        // 得到上一个节点
+        div.previousSibling;
+        // 得到下一个元素节点
+        div.nextElementSibling;
+        // 得到上一个元素节点
+        div.previousElementSibling
+        // cloneNode是拷贝节点，如果括号里为空或false，则只复制标签本身，不复制里面的内容
+        var lili = ul.children[0].cloneNode(true);
+        ul.appendChild(lili);
+    </script>
+</body>
+
+</html>

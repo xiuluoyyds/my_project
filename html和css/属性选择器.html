@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin: 20px auto;
+
+        }
+
+        /* 选择具有class属性的div元素 */
+        div[class] {
+            background-color: pink;
+        }
+
+        /* 选择具有class属性的div元素，且属性值等于icon1的div元素 */
+
+        div[class=icon1] {
+            background-color: skyblue;
+        }
+
+        /* 选择具有class属性的div元素，惬意icon开头的div元素 */
+
+        div[class^=icon] {
+            background-color: green0;
+        }
+
+        /* 选择具有class属性的div元素，且以icon结尾的div元素 */
+
+        div[class$=icon] {
+            background-color: palegreen;
+
+        }
+
+        /* 选择具有class属性的div元素，且且含有icon的div元素 */
+
+        div[class*=icon] {
+            background-color: purple;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="ion icon1"></div>
+    <div class="ion icon2"></div>
+    <div class="ion icon3"></div>
+    <div class="ion icon4"></div>
+    <div class="ion icon5"></div>
+    <div></div>
+
+</body>
+
+</html>
